@@ -11,7 +11,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-margin-top: ;
+    scroll-margin-top: 100px;
 }
 
 body {
@@ -19,10 +19,155 @@ body {
 }
 
 :root {
-    --orange: #FDA21E;
+    --dark-orange: #FDA21E;
+    --light-orange: #fcb042;
     --black: #000A0A;
     --grey:#414141;
     --blue: #0064B0;
+    --white: #fafafa;
     --poppins: 'Poppins', sans-serif;
     --dancing: 'Dancing Script', cursive;
 }
+
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey);
+}
+
+/*--------------------- HEADER ---------------------*/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 1440px;
+    height: 100px;
+    padding: 0px 20px;
+}
+
+.logo-container {
+    height: 100%;
+    padding: 15px 0;
+}
+
+.logo-container img {
+    height: 100%;
+    min-width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-icon span, #menu-hamburguesa {
+    display: none;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.menu-icon span {
+    width: 100%;
+    height: 20%;
+    background-color: var(--light-orange);
+    border-radius: 10px;
+}
+
+.navbar-ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar-ul a {
+    font-family: var(--poppins);
+    color: var(--dark-orange);
+    background-image: linear-gradient(var(--white),var(--white));
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s ease;
+}
+
+.navbar-ul a:hover{
+    background-size: 100% 2px;
+}
+
+.signup-btn {
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: var(--dark-orange);
+    border-radius: 20px;
+    border: none;
+    font-family: var(--dancing);
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.signup-btn:hover {
+    background-color: var(--black);
+    color: var(--dark-orange);
+    transition: 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+    .menu-icon span {
+        display: block;
+    }
+
+    .navbar-ul {
+        position: absolute;
+        background-color: var(--grey);
+        flex-direction: column;
+        justify-content: flex-start;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        z-index: 1;
+        display: none;
+    }
+
+    #menu-hamburguesa:checked + .navbar-ul {
+        display: flex;
+      }
+}
+
+
+/* --------------------- SECTION HERO ---------------------*/
+
+.section {
+    max-width: 100%;
+    width: 1440px;
+    padding: 20px 20px;
+}
+
+.section-hero {
+    height: calc(100vh - 100px);
+    background-image: url(/imagenes/background-hero.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-slogan {
+    font-family: var(--poppins);
+    font-size: 32px;
+}
+
+
