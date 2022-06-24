@@ -33,10 +33,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--grey);
 }
 
 /*--------------------- HEADER ---------------------*/
+
+.header-hero-background {
+    background-image: url(/imagenes/background-hero.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    width: 1440px;
+    position: relative;
+}
 
 .header {
     display: flex;
@@ -46,6 +55,10 @@ body {
     width: 1440px;
     height: 100px;
     padding: 0px 20px;
+}
+
+.header * {
+    z-index: 10;
 }
 
 .logo-container {
@@ -106,9 +119,7 @@ body {
     background-size: 100% 2px;
 }
 
-.signup-btn {
-    width: 100px;
-    height: 30px;
+.navbar-ul li:last-child > a{
     color: white;
     background-color: var(--dark-orange);
     border-radius: 20px;
@@ -118,12 +129,14 @@ body {
     font-weight: 900;
     cursor: pointer;
     transition: 0.3s ease-in;
+    background-image: unset;
+    padding: 5px;
 }
 
-.signup-btn:hover {
+.navbar-ul li:last-child > a:hover {
     background-color: var(--black);
     color: var(--dark-orange);
-    transition: 0.3s ease-out;
+    transition: 0.5s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -133,15 +146,16 @@ body {
 
     .navbar-ul {
         position: absolute;
-        background-color: var(--grey);
         flex-direction: column;
         justify-content: flex-start;
-        top: 100px;
-        right: 0;
+        top: 0;
+        right: 0px;
         width: 100%;
-        height: calc(100vh - 100px);
-        z-index: 1;
+        height: 100vh;
+        z-index: 3;
         display: none;
+        backdrop-filter: blur(5px);
+        padding-top: 100px;
     }
 
     #menu-hamburguesa:checked + .navbar-ul {
@@ -158,16 +172,54 @@ body {
     padding: 20px 20px;
 }
 
+.section-hero * {
+    z-index: 2;
+}
+
 .section-hero {
     height: calc(100vh - 100px);
-    background-image: url(/imagenes/background-hero.jpeg);
-    background-position: center;
-    background-size: cover;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    padding-top: 60px;
+}
+
+.header-hero-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(0.85);
 }
 
 .hero-slogan {
     font-family: var(--poppins);
-    font-size: 32px;
+    font-size: 48px;
+
+}
+.hero-slogan span {
+    font-family: var(--dancing);
+    color: var(--dark-orange);
+    font-size: 56px;
+}
+
+.productos-btn {
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: var(--dark-orange);
+    border-radius: 30px;
+    border: none;
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.productos-btn a{
+    color: white;
 }
 
 
