@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chayo Cookies</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2bbf1df7bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="section-container">
         <div class="header-hero-background">
-            <header class="header">
+            <header class="header" id="inicio">
                 <div class="logo-container">
                     <img src="/imagenes/logo-original.png" alt="">
                 </div>
@@ -24,8 +25,8 @@
                     </label>
                     <input type="checkbox" id="menu-hamburguesa">
                     <ul class="navbar-ul">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">¿Cómo Pedir?</a></li>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#como-pedir">¿Cómo Pedir?</a></li>
                         <li><a href="#">Productos</a></li>
                         <li><a href="#">Contacto</a></li>
                         <li><a href="#">Login</a></li>
@@ -53,7 +54,60 @@
         </div>
     </div>
     <div class="section-container">
-        
+        <section class="section section-pedir" id="como-pedir">
+            <div class="pedir-container">   
+                <div class="pedir-card-container">
+                    <div class="pedir-card-encabezado">
+                        <img src="/imagenes/icons/chatting.png" alt="">
+                    </div>
+                    <div class="pedir-card-text pedir-desplazar">
+                        <p>
+                            Escribe al DM en Instagram o al link de Whatsapp.
+                        </p>
+                    </div>
+                </div>
+                <div class="pedir-card-container">
+                    <div class="pedir-card-encabezado">
+                        <img src="/imagenes/icons/menu.png" alt="">
+                    </div>
+                    <div class="pedir-card-text pedir-desplazar">
+                        <p>
+                            Consulta el menú disponible de la semana.
+                        </p>
+                    </div>
+                </div>
+                <div class="pedir-card-container">
+                    <div class="pedir-card-encabezado">
+                        <img src="/imagenes/icons/fast-delivery.png" alt="">
+                    </div>
+                    <div class="pedir-card-text pedir-desplazar">
+                        <p>
+                            Para pedidos por delivery, envíanos los datos para su entrega.
+                        </p>
+                    </div>
+                </div>
+                <div class="pedir-card-container">
+                    <div class="pedir-card-encabezado">
+                        <img src="/imagenes/icons/food-package.png" alt="">
+                    </div>
+                    <div class="pedir-card-text pedir-desplazar">
+                        <p>
+                            Si prefieres retirarlo personalmente, acordamos el día y la hora.
+                        </p>
+                    </div>
+                </div>
+                <div class="pedir-card-container">
+                    <div class="pedir-card-encabezado">
+                        <img src="/imagenes/icons/wallet.png" alt="">
+                    </div>
+                    <div class="pedir-card-text pedir-desplazar">
+                        <p>
+                            Puedes pagar a través de Yappy o transferencia bancaria.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
