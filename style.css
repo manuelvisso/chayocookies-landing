@@ -10,7 +10,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
     scroll-margin-top: 120px;
 }
 
@@ -48,7 +48,7 @@ body {
     position: relative;
 }
 
-.header-hero-background::after {
+.header-hero-background::before {
     content: "";
     position: absolute;
     top: 0;
@@ -192,7 +192,6 @@ body {
 
 .section-hero {
     height: calc(100vh - 120px);
-
 }
 
 .hero-text-container {
@@ -244,18 +243,29 @@ body {
 /* --------------------- SECTION PEDIR ---------------------*/
 
 .section-pedir {
-    min-height: calc(80vh - 120px);
+    min-height: 50vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     background-image: url(/imagenes/a-lot-of-cookies-color.png);
-    background-repeat: repeat-x;
-    background-size:cover;
+    background-repeat: repeat;
+    background-size:500px;
+    background-attachment: fixed;
+}
+
+.h2-titulo  {
+    font-family: var(--poppins);
+    color: var(--black);
+    font-size: 36px;
+    text-align: center;
 
 }
 
 .pedir-container {
     display: grid;
-    grid-template-columns: repeat(5, minmax(min(15%, 150px), 1fr));
+    grid-template-columns: repeat(4, minmax(min(15%, 150px), 1fr));
     width: 90%;
     gap: 15px;
     justify-items: center;
@@ -315,6 +325,89 @@ body {
 
 @media (max-width: 900px) {
     .pedir-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 300px);
     }
 }
+
+@media (max-width: 400px) {
+    
+    .pedir-card-container {
+        height: 100px;
+        width: 100px;
+        padding: 5px;
+
+    }
+
+    .pedir-card-text p {
+        font-size: 12px;
+    }
+
+    .pedir-card-container:hover {
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    .pedir-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 200px);
+    }
+}
+
+/* --------------------- SECTION PRODUCTOS  ---------------------*/
+
+.section-productos {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--light-pink);
+
+}
+
+.productos-galeria {
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.productos-galeria img {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.6s;
+    border-radius: 20px;
+    border: 4px solid var(--dark-orange);
+
+}
+
+.productos-galeria img:hover {
+    flex: 4;
+}
+
+@media (max-width:900px) {
+    .productos-galeria {
+        flex-direction: column;
+        width: 80%;
+        height: 80vh;
+    }
+
+    .productos-galeria img {
+        height: 100%;
+        width: 50%;
+        flex: 1;
+        object-fit: cover;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.6s;
+    }
+    
+}
+
