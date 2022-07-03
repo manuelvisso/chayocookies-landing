@@ -34,6 +34,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(/imagenes/a-lot-of-cookies-color.png);
+    background-repeat: repeat;
+    background-size:500px;
+    background-attachment: fixed;
 }
 
 /*--------------------- HEADER ---------------------*/
@@ -249,10 +253,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    background-image: url(/imagenes/a-lot-of-cookies-color.png);
-    background-repeat: repeat;
-    background-size:500px;
-    background-attachment: fixed;
 }
 
 .h2-titulo  {
@@ -403,6 +403,8 @@ body {
     position: absolute;
     bottom: 0;
     top: 0;
+    left: 0;
+    right: 0;
     opacity: 0;
     transition: all 1s ease;
     display: flex;
@@ -412,9 +414,9 @@ body {
     text-align: center;
 }
 
-.cookie-name, .cookie-name a {
+.cookie-name {
     font-family: var(--dancing);
-    font-size: clamp(16px, 4vw, 40px);
+    font-size: clamp(22px, 4vw, 40px);
     font-weight: 600;
     color: var(--light-pink);
 }
@@ -446,3 +448,108 @@ body {
     
 }
 
+
+/* --------------------- SECTION CONTACTO  ---------------------*/
+
+.section-ubicacion {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ubicacion-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.div-ubicacion, .div-contacto {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.div-ubicacion {
+    gap: 40px;
+}
+
+.direccion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.div-contacto p, .div-contacto a, .direccion-container p {
+    font-family: var(--poppins);
+    color: var(--black);
+    font-size: 18px;
+}
+
+.direccion-container iframe {
+    width: 100%;
+    height: 45%;
+}
+
+.direccion-container p, .div-contacto a {
+    font-weight: 600;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-container input, .form-container textarea {
+    background-color: var(--light-pink);
+    color: var(--black);
+    font-family: var(--poppins);
+    width: 200px;
+    max-width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid var(--dark-orange);
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+}
+
+.form-container textarea {
+    height: 100px;
+}
+
+.form-container input::placeholder, .form-container textarea::placeholder {
+    color: var(--black);
+    font-family: var(--poppins);
+    font-weight: 600;
+}
+
+.form-container button {
+    width: 150px;
+    height: 50px;
+    color: var(--white);
+    background-color: var(--dark-orange);
+    border-radius: 20px;
+    border: none;
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* --------------------- FOOTER  ---------------------*/
